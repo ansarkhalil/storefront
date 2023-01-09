@@ -1,0 +1,6 @@
+{% extends "base.html" %} {% block "page_title" %} All posts {%endblock%} 
+{% block "content" %}
+<h1>{{post.title|title}}</h1>
+<p>{{post.description}}</p>
+
+{% endblock %}

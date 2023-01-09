@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block "page_title" %} All posts {%endblock%}
+
+{% block "content" %}
+<ul>
+  {% for post in posts %}
+  <li>
+    <div>
+      <a href="{% url 'blog-single-post' post.slug %}">{{post.title|title}}</a>
+      <p>{{post.description}}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+{%endblock%}
